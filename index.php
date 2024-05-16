@@ -1,5 +1,9 @@
 <?php
-for ($i = 0; $i < 10; $i++) {
-    echo $i . "Hello World!";
+
+$names=array("John","Peter","Sally","Jane");
+
+foreach($names as $name){
+    echo $name."<br>";
 }
 
+?>
