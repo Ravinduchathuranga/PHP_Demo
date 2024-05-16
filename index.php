@@ -1,22 +1,27 @@
 <?php
 
-// function sayHello($name)
-// {
-//     echo "Hello $name";
-// }
+class student
+{
+    public $name;   //inside class, outside class, subclass
+    protected $age; //inside class and subclass
+    private $roll;  //inside class
 
-// sayHello("John");
+    public function __construct($name, $age, $roll)
+    {
+        $this->name = $name;
+        $this->age = $age;
+        $this->roll = $roll;
+    }
 
-//  The above code will output: 
-//  Hello John 
-//  In the above example, the  sayHello()  function takes a parameter  $name  and prints the message  Hello $name . 
-//  PHP Function Arguments 
-//  A function can take multiple arguments separated by commas. 
-//  The following example demonstrates how to define a function with multiple arguments:
-
-function sum($num1,$num2){
-    $total = $num1 + $num2;
-    echo "The sum of $num1 and $num2 is $total";
+    public function show()
+    {
+        echo "Name: " . $this->name . "<br>";
+        echo "Age: " . $this->age . "<br>";
+        echo "Roll: " . $this->roll . "<br>";
+    }
 }
-sum(10,20);
+
+$student1 = new student("John", 20, 101);
+$student1->show();
+
 ?>
